@@ -2,10 +2,8 @@ from PyQt5 import QtWidgets
 from PyQt5.QtWidgets import QApplication, QMainWindow
 from PyQt5.QtGui import QValidator
 from PyQt5.QtGui import QTextFrame
-import spotipy
 import typing
 from pynput import keyboard
-from spotipy.oauth2 import SpotifyClientCredentials
 import sys
 import os
 import json
