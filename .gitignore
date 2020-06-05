@@ -1,5 +1,9 @@
 config.py
 
+# Editors
+.vscode/
+.idea/
+
 # Environments
 .env
 .venv
