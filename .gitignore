@@ -1,8 +1,8 @@
-config.py
-
 # Editors
 .vscode/
 .idea/
+
+node_modules/
 
 # Environments
 .env
