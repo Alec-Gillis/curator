@@ -2,14 +2,14 @@
     "name": "curator",
     "version": "1.0.0",
     "scripts": {
-      "serve": "vue-cli-service serve",
-      "build": "vue-cli-service build"
+        "serve": "vue-cli-service serve",
+        "build": "vue-cli-service build"
     },
     "dependencies": {
-      "vue": "^2.6.12"
+        "vue": "2.6.12"
     },
     "devDependencies": {
-      "@vue/cli-service": "^4.5.0"
+        "@vue/cli-plugin-typescript": "4.5.0",
+        "typescript": "5.4.5"
     }
-  }
-  
+}
