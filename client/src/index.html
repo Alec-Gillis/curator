@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="vendored/htmx2.0.0.min.js"></script>
+  <title>Curator</title>
+</head>
+<body>
+  <div>
+    <!-- Button to trigger Spotify login -->
+    <button hx-post="http://localhost:8000/auth/login">Login with Spotify</button>
+    <!-- Placeholder for the username, will be filled by htmx response -->
+    <div id="user-info" hx-get="http://localhost:8000/api/user" hx-trigger="load">
+      <!-- User info will be loaded here -->
+    </div>
+  </div>
+
+  <script>
+    // Add any JavaScript for initialization or additional functionality here.
+  </script>
+
+</body>
+</html>
