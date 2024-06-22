@@ -1,0 +1,15 @@
+.container {
+    font-family:fantasy;
+    background-color: teal
+}
+
+.header {
+    background-color: #333;
+    color: red;
+    text-align: center;
+    padding: 1rem;
+}
+
+.text {
+    color: blue;
+}
