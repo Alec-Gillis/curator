@@ -4,8 +4,8 @@
 
 #### Server:
 ```
-pip install -r requirements.txt
-source ./venv/bin/activate
+poetry shell
+poetry install
 uvicorn main:app --reload
 ```
 
