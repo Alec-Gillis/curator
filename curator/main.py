@@ -3,7 +3,7 @@ from fastapi.staticfiles import StaticFiles
 from fastapi.templating import Jinja2Templates
 from starlette.middleware.cors import CORSMiddleware
 
-from app.api.auth import router as auth_router
+from curator.api.auth import router as auth_router
 
 # Create FastAPI app
 app = FastAPI()
