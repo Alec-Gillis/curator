@@ -1,9 +1,10 @@
-from fastapi import FastAPI
+from fastapi import FastAPI, Request
 from fastapi.staticfiles import StaticFiles
 from fastapi.templating import Jinja2Templates
 from starlette.middleware.cors import CORSMiddleware
+from fastapi.responses import HTMLResponse
 
-from curator.api.auth import router as auth_router
+from api.auth import router as auth_router
 
 # Create FastAPI app
 app = FastAPI()
@@ -18,12 +19,12 @@ app.add_middleware(
 )
 
 # Mount the static files directory to serve the frontend files
-app.mount("/static", StaticFiles(directory="app/static"), name="static")
+app.mount("/static", StaticFiles(directory="static"), name="static")
 
 # Include the authentication router
 app.include_router(auth_router, prefix="/auth")
 
-templates = Jinja2Templates(directory="app/templates")
+templates = Jinja2Templates(directory="templates")
 
 @app.get("/", response_class=HTMLResponse)
 async def read_root(request: Request):
