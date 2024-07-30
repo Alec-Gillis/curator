@@ -6,7 +6,7 @@
 ```
 poetry shell
 poetry install
-uvicorn main:app --reload
+fastapi dev main
 ```
 
 Navigate to http://localhost:8080
