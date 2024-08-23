@@ -19,12 +19,6 @@
             <button hx-get="api/auth/login" hx-redirect="follow">
                 Login with Spotify
             </button>
-            <!-- Placeholder for the username, will be filled by htmx response -->
-            <div
-                id="user-info"
-                hx-get="http://localhost:8000/api/user"
-                hx-trigger="load"
-            >
                 <!-- User info will be loaded here -->
             </div>
             <div>

@@ -31,10 +31,3 @@ templates = Jinja2Templates(directory="templates")
 @app.get("/", response_class=HTMLResponse)
 async def read_root(request: Request):
     return templates.TemplateResponse("index.html", {"request": request})
-
-
-# Define a test endpoint for fetching user data (mock endpoint)
-@app.get("/api/user")
-def read_user():
-    # Mock endpoint for testing, replace with actual user data retrieval
-    return {"username": "test_user"}
