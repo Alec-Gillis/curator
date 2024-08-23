@@ -1,6 +1,5 @@
 from fastapi import FastAPI, Request
 from fastapi.responses import HTMLResponse
-from fastapi.staticfiles import StaticFiles
 from fastapi.templating import Jinja2Templates
 from starlette.middleware.cors import CORSMiddleware
 
@@ -22,9 +21,6 @@ app.add_middleware(
     allow_methods=["*"],
     allow_headers=["*"],
 )
-
-# Mount the static files directory to serve the frontend files
-app.mount("/static", StaticFiles(directory="static"), name="static")
 
 # Include the authentication router
 app.include_router(auth_router, prefix="/api/auth")
